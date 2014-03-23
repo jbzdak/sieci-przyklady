@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 if [ $# -lt 1 ]
 then
     echo "USAGE <<ROOM>>>"
@@ -9,8 +10,15 @@ fi
 
 source config.sh
 
+message=$2
+
 exec 5<> /dev/tcp/${HOST}/${PORT}
 
-echo -e "LSTROOM $1" >&5
+echo -e "POST $1" >&5
+
+
+echo ${message} >&5
+
 echo -e "EXT" >&5
+
 cat <&5

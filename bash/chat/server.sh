@@ -13,16 +13,17 @@ mkdir -p $CHT_ROOM_DIR
 
 export VERBOSE=0
 
-if [ $1 -eq silent ]
+if [ $1 = silent ]
 then
     export VERBOSE=1
 fi
 
 # Echo if server is in verbose mode
-function mecho{
-    if [ ${VERBOSE} ]
+function mecho
+{
+    if [ ${VERBOSE} -ne 1 ]
     then
-        echo $@
+        echo $@ ;
     fi
 }
 
