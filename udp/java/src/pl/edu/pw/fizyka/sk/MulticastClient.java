@@ -1,13 +1,13 @@
 package pl.edu.pw.fizyka.sk;
 
 import java.net.DatagramPacket;
-import java.net.MulticastSocket;
+import java.net.DatagramSocket;
 import java.net.SocketTimeoutException;
 
 public class MulticastClient {
 
     public static void main(String[] args) throws Exception{
-        MulticastSocket s = new MulticastSocket(Config.MULTICAST_PORT);
+        DatagramSocket s = new DatagramSocket(Config.MULTICAST_PORT);
 
         byte[] message = "Test".getBytes("utf8");
 

@@ -1,13 +1,3 @@
-
-/*
- * server.cpp
-
-
- *
- *  Created on: Apr 7, 2014
- *      Author: jb
- */
-
 #include<signal.h>
 #include<stdio.h>
 #include<sys/socket.h>
