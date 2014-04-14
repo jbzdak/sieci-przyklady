@@ -47,7 +47,7 @@ int main(int argv, char **argc){
 	group_addr.imr_multiaddr.s_addr = inet_addr("224.3.29.71");
 	group_addr.imr_interface.s_addr = htonl(INADDR_ANY);
 
-	if (setsockopt(fd, SOL_SOCKET, IP_ADD_MEMBERSHIP, &group_addr, sizeof(group_addr))<0){
+	if (setsockopt(fd, IPPROTO_IP, IP_ADD_MEMBERSHIP, &group_addr, sizeof(group_addr))<0){
 		perror("Couldn't listen to group");
 		exit(1);
 	}
