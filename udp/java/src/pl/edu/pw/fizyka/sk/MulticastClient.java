@@ -7,7 +7,7 @@ import java.net.SocketTimeoutException;
 public class MulticastClient {
 
     public static void main(String[] args) throws Exception{
-        DatagramSocket s = new DatagramSocket(Config.MULTICAST_PORT);
+        DatagramSocket s = new DatagramSocket();
 
         byte[] message = "Test".getBytes("utf8");
 
